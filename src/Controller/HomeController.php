@@ -18,4 +18,15 @@ class HomeController extends AbstractController
 
   }
 
+  /**
+  * @Route("/blog/{slug<[a-z\d-]+>?Article Sans Titre}", name="blog_title")
+  */
+  public function show($slug)
+  {
+
+      return $this->render('home.html.twig',array(
+        'slug' => $slug));
+
+  }
+
 }
